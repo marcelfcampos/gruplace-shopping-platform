@@ -203,23 +203,23 @@ Acompanha Indicadores em Tempo Real
 - Dados em tempo real
 - Apoio à tomada de decisão
 
-## Apresentação
+## Pitch do Projeto
 
-#### Acesse o Pitch Gruplace:
+#### Acesse a apresentação completa do Gruplace::
 
-🔗 [Visualizar Pitch Gruplace](LINK_DO_GOOGLE_DRIVE)
+🔗 [Visualizar Pitch Gruplace]   [Abrir Pitch Gruplace (PDF)](https://gruplace-shopping-platform-7wzq.vercel.app/docs/Pitch_Gruplace.pdf)
 
 ## Demonstração do MVP
 
 #### Acesse a versão publicada:
 
-🔗 [Abrir MVP Gruplace](LINK_DA_VERCEL)
+🔗 [Abrir MVP Gruplace](https://gruplace-shopping-platform-7wzq.vercel.app/)
 
 ## Repositório
 
 #### Código-fonte do projeto:
 
-🔗 https://github.com/marcelfcampos/gruplace-shopping-platform
+🔗 [Acessar repositório do projeto](https://github.com/marcelfcampos/gruplace-shopping-platform)
 
 ## ## Equipe Fundadora do Gruplace
 
