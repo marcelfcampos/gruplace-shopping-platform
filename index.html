@@ -1,0 +1,976 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Gruplace – Shopping Inteligente</title>
+  <link rel="stylesheet" href="assets/css/style.css">
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/Chart.js/4.4.1/chart.umd.js"></script>
+</head>
+
+<body>
+
+  <!-- ═══════════════════════════════ HEADER ══════════════════════════════ -->
+  <header id="header">
+    <a href="#" class="logo">Gru<span>place</span></a>
+    <nav>
+      <a href="#solucoes" onclick="showConsumer(event)">Consumidor</a>
+      <a href="#solucoes" onclick="showStoreOwner(event)">Lojista</a>
+      <a href="#solucoes" onclick="showShopping(event)">Shopping</a>
+      <div class="auth-area" id="authAreaDesktop">
+        <a href="#" class="btn-login" id="loginBtnDesktop" onclick="openAuthModal('login', event)">Entrar</a>
+        <div class="account-menu" id="accountMenuDesktop" style="display:none;">
+          <button class="btn-account" onclick="toggleAccountDropdown(event)">
+            <span class="account-avatar" id="accountAvatarDesktop">U</span>
+            <span id="accountNameDesktop">Minha Conta</span>
+          </button>
+          <div class="account-dropdown" id="accountDropdownDesktop">
+            <a href="#" onclick="return accountAction('profile')">Meu Perfil</a>
+            <a href="#" onclick="return accountAction('campaigns')">Minhas Campanhas</a>
+            <a href="#" onclick="return accountAction('inventory')">Meu Estoque</a>
+            <a href="#" onclick="return accountAction('settings')">Configurações</a>
+            <a href="#" class="account-logout" onclick="return logoutUser()">Sair</a>
+          </div>
+        </div>
+      </div>
+    </nav>
+    <div class="hamburger" id="hamburger" onclick="toggleMenu()">
+      <span></span><span></span><span></span>
+    </div>
+
+
+  </header>
+
+  <!-- ═══════════════════════════════ BOTÃO PITCH ══════════════════════════════════ -->
+  <div class="pitch-access">
+    <a href="https://skillmatch-js.vercel.app/" target="_blank" rel="noopener noreferrer" class="pitch-access__btn">
+      🚀 Acessar Pitch Gruplace
+    </a>
+  </div>
+  <!-- ═══════════════════════════════ BOTÃO PITCH ══════════════════════════════════ -->
+
+  <!-- ═══════════════════════════════ REDES SOCIAIS ════════════════════════════════ -->
+  <i class="fab fa-linkedin"></i>
+  <!-- ═══════════════════════════════ REDES SOCIAIS ════════════════════════════════ -->
+
+  <!-- ═══════════════════════════════ EQUIPE E PRÓXIMOS PASSOS ══════════════════════════════════ -->
+  <section class="team-section" id="equipe">
+    <div class="team-section__inner">
+
+      <div class="team-section__header">
+        <span class="team-section__brand">Gru<span>place</span></span>
+        <h2 class="team-section__title">Equipe e Próximos Passos</h2>
+        <p class="team-section__subtitle">Idealizadores do Projeto</p>
+      </div>
+
+      <div class="team-section__divider"></div>
+
+      <div class="team-grid">
+
+        <div class="team-card">
+          <div class="team-card__avatar">MC</div>
+          <h3 class="team-card__name">Marcel Ferreira Campos</h3>
+          <div class="team-card__links">
+            <a href="http://linkedin.com/in/marcelfcampos" target="_blank" rel="noopener noreferrer"
+              class="team-card__link" aria-label="LinkedIn de Marcel Ferreira Campos">
+              <svg viewBox="0 0 24 24" class="team-card__icon" aria-hidden="true">
+                <path
+                  d="M20.45 20.45h-3.55v-5.57c0-1.33-.02-3.04-1.85-3.04-1.85 0-2.14 1.45-2.14 2.94v5.67H9.36V9h3.41v1.56h.05c.48-.9 1.64-1.85 3.38-1.85 3.61 0 4.28 2.38 4.28 5.47v6.27zM5.34 7.43a2.06 2.06 0 1 1 0-4.12 2.06 2.06 0 0 1 0 4.12zM7.12 20.45H3.56V9h3.56v11.45zM22.22 0H1.77C.79 0 0 .77 0 1.73v20.54C0 23.23.79 24 1.77 24h20.45c.98 0 1.78-.77 1.78-1.73V1.73C24 .77 23.2 0 22.22 0z" />
+              </svg>
+              LinkedIn
+            </a>
+            <a href="http://github.com/marcelfcampos
+" target="_blank" rel="noopener noreferrer" class="team-card__link" aria-label="GitHub de Marcel Ferreira Campos">
+              <svg viewBox="0 0 24 24" class="team-card__icon" aria-hidden="true">
+                <path
+                  d="M12 .5C5.65.5.5 5.65.5 12c0 5.08 3.29 9.39 7.86 10.91.57.1.78-.25.78-.55v-2.15c-3.2.7-3.87-1.37-3.87-1.37-.52-1.33-1.28-1.68-1.28-1.68-1.05-.72.08-.7.08-.7 1.16.08 1.77 1.19 1.77 1.19 1.03 1.77 2.7 1.26 3.36.96.1-.74.4-1.26.72-1.55-2.55-.29-5.23-1.28-5.23-5.69 0-1.26.45-2.29 1.19-3.09-.12-.29-.52-1.46.11-3.04 0 0 .97-.31 3.18 1.18a11.06 11.06 0 0 1 5.8 0c2.21-1.49 3.18-1.18 3.18-1.18.63 1.58.23 2.75.11 3.04.74.8 1.19 1.83 1.19 3.09 0 4.42-2.69 5.4-5.25 5.68.41.36.78 1.07.78 2.16v3.2c0 .31.21.66.79.55C20.21 21.39 23.5 17.08 23.5 12 23.5 5.65 18.35.5 12 .5z" />
+              </svg>
+              GitHub
+            </a>
+          </div>
+        </div>
+
+        <div class="team-card">
+          <div class="team-card__avatar">GC</div>
+          <h3 class="team-card__name">Giovanna Fontanella Campos</h3>
+          <div class="team-card__links">
+            <a href="http://www.linkedin.com/in/giovannafontanellac" target="_blank" rel="noopener noreferrer"
+              class="team-card__link" aria-label="LinkedIn de Giovanna Fontanella Campos">
+              <svg viewBox="0 0 24 24" class="team-card__icon" aria-hidden="true">
+                <path
+                  d="M20.45 20.45h-3.55v-5.57c0-1.33-.02-3.04-1.85-3.04-1.85 0-2.14 1.45-2.14 2.94v5.67H9.36V9h3.41v1.56h.05c.48-.9 1.64-1.85 3.38-1.85 3.61 0 4.28 2.38 4.28 5.47v6.27zM5.34 7.43a2.06 2.06 0 1 1 0-4.12 2.06 2.06 0 0 1 0 4.12zM7.12 20.45H3.56V9h3.56v11.45zM22.22 0H1.77C.79 0 0 .77 0 1.73v20.54C0 23.23.79 24 1.77 24h20.45c.98 0 1.78-.77 1.78-1.73V1.73C24 .77 23.2 0 22.22 0z" />
+              </svg>
+              LinkedIn
+            </a>
+            <a href="https://github.com/giovannafcampos" target="_blank" rel="noopener noreferrer"
+              class="team-card__link" aria-label="GitHub de Giovanna Fontanella Campos">
+              <svg viewBox="0 0 24 24" class="team-card__icon" aria-hidden="true">
+                <path
+                  d="M12 .5C5.65.5.5 5.65.5 12c0 5.08 3.29 9.39 7.86 10.91.57.1.78-.25.78-.55v-2.15c-3.2.7-3.87-1.37-3.87-1.37-.52-1.33-1.28-1.68-1.28-1.68-1.05-.72.08-.7.08-.7 1.16.08 1.77 1.19 1.77 1.19 1.03 1.77 2.7 1.26 3.36.96.1-.74.4-1.26.72-1.55-2.55-.29-5.23-1.28-5.23-5.69 0-1.26.45-2.29 1.19-3.09-.12-.29-.52-1.46.11-3.04 0 0 .97-.31 3.18 1.18a11.06 11.06 0 0 1 5.8 0c2.21-1.49 3.18-1.18 3.18-1.18.63 1.58.23 2.75.11 3.04.74.8 1.19 1.83 1.19 3.09 0 4.42-2.69 5.4-5.25 5.68.41.36.78 1.07.78 2.16v3.2c0 .31.21.66.79.55C20.21 21.39 23.5 17.08 23.5 12 23.5 5.65 18.35.5 12 .5z" />
+              </svg>
+              GitHub
+            </a>
+          </div>
+        </div>
+
+        <div class="team-card">
+          <div class="team-card__avatar">FC</div>
+          <h3 class="team-card__name">Fernanda Fontanella Campos</h3>
+          <div class="team-card__links">
+            <a href="http://linkedin.com/in/fernandavfontanella" target="_blank" rel="noopener noreferrer"
+              class="team-card__link" aria-label="LinkedIn de Fernanda Fontanella Campos">
+              <svg viewBox="0 0 24 24" class="team-card__icon" aria-hidden="true">
+                <path
+                  d="M20.45 20.45h-3.55v-5.57c0-1.33-.02-3.04-1.85-3.04-1.85 0-2.14 1.45-2.14 2.94v5.67H9.36V9h3.41v1.56h.05c.48-.9 1.64-1.85 3.38-1.85 3.61 0 4.28 2.38 4.28 5.47v6.27zM5.34 7.43a2.06 2.06 0 1 1 0-4.12 2.06 2.06 0 0 1 0 4.12zM7.12 20.45H3.56V9h3.56v11.45zM22.22 0H1.77C.79 0 0 .77 0 1.73v20.54C0 23.23.79 24 1.77 24h20.45c.98 0 1.78-.77 1.78-1.73V1.73C24 .77 23.2 0 22.22 0z" />
+              </svg>
+              LinkedIn
+            </a>
+            <a href="https://github.com/fernandavfontanella" target="_blank" rel="noopener noreferrer"
+              class="team-card__link" aria-label="GitHub de Fernanda Fontanella Campos">
+              <svg viewBox="0 0 24 24" class="team-card__icon" aria-hidden="true">
+                <path
+                  d="M12 .5C5.65.5.5 5.65.5 12c0 5.08 3.29 9.39 7.86 10.91.57.1.78-.25.78-.55v-2.15c-3.2.7-3.87-1.37-3.87-1.37-.52-1.33-1.28-1.68-1.28-1.68-1.05-.72.08-.7.08-.7 1.16.08 1.77 1.19 1.77 1.19 1.03 1.77 2.7 1.26 3.36.96.1-.74.4-1.26.72-1.55-2.55-.29-5.23-1.28-5.23-5.69 0-1.26.45-2.29 1.19-3.09-.12-.29-.52-1.46.11-3.04 0 0 .97-.31 3.18 1.18a11.06 11.06 0 0 1 5.8 0c2.21-1.49 3.18-1.18 3.18-1.18.63 1.58.23 2.75.11 3.04.74.8 1.19 1.83 1.19 3.09 0 4.42-2.69 5.4-5.25 5.68.41.36.78 1.07.78 2.16v3.2c0 .31.21.66.79.55C20.21 21.39 23.5 17.08 23.5 12 23.5 5.65 18.35.5 12 .5z" />
+              </svg>
+              GitHub
+            </a>
+          </div>
+        </div>
+
+      </div>
+
+      <!-- ── ROADMAP / PRÓXIMOS PASSOS ───────────────────────────────────────── -->
+      <div class="roadmap">
+        <h3 class="roadmap__title">Roadmap Gruplace</h3>
+
+        <div class="roadmap-grid">
+
+          <div class="roadmap-card">
+            <div class="roadmap-card__icon">✅</div>
+            <h4 class="roadmap-card__title">MVP Validado</h4>
+            <span class="roadmap-status roadmap-status--done">Concluído</span>
+          </div>
+
+          <div class="roadmap-card">
+            <div class="roadmap-card__icon">🤝</div>
+            <h4 class="roadmap-card__title">Integração com Lojistas</h4>
+            <span class="roadmap-status roadmap-status--progress">Em andamento</span>
+          </div>
+
+          <div class="roadmap-card">
+            <div class="roadmap-card__icon">📊</div>
+            <h4 class="roadmap-card__title">Dashboard de Inteligência</h4>
+            <span class="roadmap-status roadmap-status--dev">Em desenvolvimento</span>
+          </div>
+
+          <div class="roadmap-card">
+            <div class="roadmap-card__icon">🏬</div>
+            <h4 class="roadmap-card__title">Piloto com Shopping Center</h4>
+            <span class="roadmap-status roadmap-status--next">Próxima etapa</span>
+          </div>
+
+        </div>
+      </div>
+
+    </div>
+  </section>
+  <!-- ═══════════════════════════════ FIM EQUIPE E PRÓXIMOS PASSOS ══════════════════════════════════ -->
+
+  <div class="mobile-nav" id="mobileNav">
+    <a href="#solucoes" onclick="showConsumer(event); toggleMenu()">Consumidor</a>
+    <a href="#solucoes" onclick="showStoreOwner(event); toggleMenu()">Lojista</a>
+    <a href="#solucoes" onclick="showShopping(event); toggleMenu()">Shopping</a>
+    <a href="#" class="btn-login" id="loginBtnMobile" style="text-align:center;padding:12px;"
+      onclick="openAuthModal('login', event); toggleMenu()">Entrar</a>
+    <div class="account-menu-mobile" id="accountMenuMobile" style="display:none;">
+      <div class="account-mobile-name" id="accountNameMobile">Minha Conta</div>
+      <a href="#" onclick="toggleMenu(); return accountAction('profile')">Meu Perfil</a>
+      <a href="#" onclick="toggleMenu(); return accountAction('campaigns')">Minhas Campanhas</a>
+      <a href="#" onclick="toggleMenu(); return accountAction('inventory')">Meu Estoque</a>
+      <a href="#" onclick="toggleMenu(); return accountAction('settings')">Configurações</a>
+      <a href="#" class="account-logout" onclick="toggleMenu(); return logoutUser()">Sair</a>
+    </div>
+  </div>
+
+  <!-- ═══════════════════════════════ HERO ════════════════════════════════ -->
+  <section id="hero">
+    <div class="container">
+
+      <div class="hero-left">
+        <div class="hero-eyebrow">Plataforma de Relacionamento</div>
+        <h1>Shopping<br><span class="accent">Inteligente</span></h1>
+        <p class="hero-desc">
+          Conectando consumidores, lojistas e dados em um ecossistema digital.
+          Ofertas personalizadas, relacionamento real, inteligência estratégica.
+        </p>
+        <div class="hero-btns">
+          <a href="#solucoes" class="btn-primary">Experimente Grátis</a>
+          <a href="#como-funciona" class="btn-secondary">Ver Demonstração</a>
+        </div>
+        <div class="hero-stats">
+          <div class="stat">
+            <div class="stat-n">1.8k+</div>
+            <div class="stat-l">Usuários ativos</div>
+          </div>
+          <div class="stat">
+            <div class="stat-n">48</div>
+            <div class="stat-l">Campanhas ativas</div>
+          </div>
+          <div class="stat">
+            <div class="stat-n">78%</div>
+            <div class="stat-l">Engajamento médio</div>
+          </div>
+        </div>
+      </div>
+
+      <div class="hero-visual">
+
+        <!-- Linhas animadas conectando os mockups -->
+        <svg class="connections-svg" viewBox="0 0 480 480" preserveAspectRatio="none">
+          <defs>
+            <linearGradient id="lg1" x1="0%" y1="0%" x2="100%" y2="0%">
+              <stop offset="0%" style="stop-color:#2563EB;stop-opacity:0.5" />
+              <stop offset="100%" style="stop-color:#7C3AED;stop-opacity:0.5" />
+            </linearGradient>
+          </defs>
+          <path d="M 155 240 Q 260 180 300 130" fill="none" stroke="url(#lg1)" stroke-width="1.5" stroke-dasharray="6,4"
+            opacity="0.5">
+            <animate attributeName="stroke-dashoffset" values="0;-40" dur="2s" repeatCount="indefinite" />
+          </path>
+          <path d="M 300 310 Q 260 310 155 260" fill="none" stroke="url(#lg1)" stroke-width="1.5" stroke-dasharray="6,4"
+            opacity="0.5">
+            <animate attributeName="stroke-dashoffset" values="0;-40" dur="2.5s" repeatCount="indefinite" />
+          </path>
+          <path d="M 340 220 Q 360 290 330 320" fill="none" stroke="#7C3AED" stroke-width="1.5" stroke-dasharray="6,4"
+            opacity="0.4">
+            <animate attributeName="stroke-dashoffset" values="0;-40" dur="3s" repeatCount="indefinite" />
+          </path>
+          <circle cx="155" cy="240" r="5" fill="#2563EB" opacity="0.6">
+            <animate attributeName="r" values="5;7;5" dur="2s" repeatCount="indefinite" />
+          </circle>
+          <circle cx="340" cy="130" r="5" fill="#7C3AED" opacity="0.6">
+            <animate attributeName="r" values="5;7;5" dur="2.5s" repeatCount="indefinite" />
+          </circle>
+          <circle cx="340" cy="350" r="5" fill="#0F766E" opacity="0.6">
+            <animate attributeName="r" values="5;7;5" dur="3s" repeatCount="indefinite" />
+          </circle>
+        </svg>
+
+        <!-- Smartphone -->
+        <div class="mockup-phone">
+          <div class="phone-screen">
+            <div class="phone-notch"></div>
+            <div class="phone-offer">
+              <div class="phone-offer-store">Urban Style</div>
+              <div class="phone-offer-title">Jaquetas Premium</div>
+              <div class="phone-offer-disc">30% OFF</div>
+            </div>
+            <div class="phone-offer2">
+              <div class="phone-offer-store">TechZone</div>
+              <div class="phone-offer-title">Notebook Gamer</div>
+              <div class="phone-offer-disc">20% OFF</div>
+            </div>
+            <div class="phone-offer3">
+              <div class="phone-offer-store">Food Station</div>
+              <div class="phone-offer-title">Combo Especial</div>
+              <div class="phone-offer-disc">15% OFF</div>
+            </div>
+          </div>
+        </div>
+
+        <!-- Dashboard Lojista -->
+        <div class="mockup-lojista">
+          <div class="mockup-lojista-title">Dashboard Lojista</div>
+          <div class="mini-kpi">
+            <div>
+              <div class="mini-kpi-n">1.2k</div>
+              <div class="mini-kpi-l">Seguidores</div>
+            </div>
+            <div>
+              <div class="mini-kpi-n">78%</div>
+              <div class="mini-kpi-l">Engajamento</div>
+            </div>
+          </div>
+          <div class="mini-bar-wrap">
+            <div class="mini-bar" style="height:24px"></div>
+            <div class="mini-bar" style="height:32px;background:#7C3AED"></div>
+            <div class="mini-bar" style="height:20px"></div>
+            <div class="mini-bar" style="height:38px"></div>
+            <div class="mini-bar" style="height:28px;background:#7C3AED"></div>
+            <div class="mini-bar" style="height:40px"></div>
+            <div class="mini-bar" style="height:35px;background:#7C3AED"></div>
+          </div>
+        </div>
+
+        <!-- Dashboard Shopping -->
+        <div class="mockup-shopping">
+          <div class="mockup-shopping-title">Shopping Center</div>
+          <div class="shop-kpi">
+            <div class="shop-kpi-n">1.842</div>
+            <div class="shop-kpi-l">Usuários ativos hoje</div>
+          </div>
+          <div class="shop-badge">▲ 12% esta semana</div>
+        </div>
+
+      </div><!-- /.hero-visual -->
+    </div><!-- /.container -->
+  </section>
+
+  <!-- ═══════════════════════════ COMO FUNCIONA ════════════════════════════ -->
+  <section id="como-funciona">
+    <div class="container">
+      <p class="section-label">Processo</p>
+      <h2 class="section-title">Como funciona</h2>
+      <p class="section-sub">Em cinco passos simples, o Gruplace conecta você às melhores oportunidades do seu shopping.
+      </p>
+
+      <div class="timeline" id="timeline">
+        <div class="tl-step">
+          <div class="tl-icon">🎯</div>
+          <div class="tl-num">01</div>
+          <div class="tl-label">Escolha seus interesses</div>
+        </div>
+        <div class="tl-connector"></div>
+        <div class="tl-step">
+          <div class="tl-icon">🏪</div>
+          <div class="tl-num">02</div>
+          <div class="tl-label">Siga suas lojas favoritas</div>
+        </div>
+        <div class="tl-connector"></div>
+        <div class="tl-step">
+          <div class="tl-icon">🎁</div>
+          <div class="tl-num">03</div>
+          <div class="tl-label">Receba ofertas personalizadas</div>
+        </div>
+        <div class="tl-connector"></div>
+        <div class="tl-step">
+          <div class="tl-icon">👟</div>
+          <div class="tl-num">04</div>
+          <div class="tl-label">Visite as lojas</div>
+        </div>
+        <div class="tl-connector"></div>
+        <div class="tl-step">
+          <div class="tl-icon">📊</div>
+          <div class="tl-num">05</div>
+          <div class="tl-label">Gere dados e resultados</div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ═══════════════════════════ SOLUÇÕES (TABS) ══════════════════════════ -->
+  <section id="solucoes">
+    <div class="container">
+      <p class="section-label">Soluções</p>
+      <h2 class="section-title">Para cada perfil, uma solução</h2>
+      <p class="section-sub">Seja consumidor, lojista ou gestor de shopping — o Gruplace tem o recurso certo para você.
+      </p>
+
+      <div class="seg-control">
+        <button class="seg-btn active" id="segBtn-consumidor" onclick="showConsumer()">👤 Consumidor</button>
+        <button class="seg-btn" id="segBtn-lojista" onclick="showStoreOwner()">🏪 Lojista</button>
+        <button class="seg-btn" id="segBtn-shopping" onclick="showShopping()">🏢 Shopping</button>
+      </div>
+
+      <!-- ── ABA CONSUMIDOR ─────────────────────────────────── -->
+      <div class="tab-content active" id="tab-consumidor">
+        <h3 style="font-size:24px;font-weight:800;color:var(--ink);margin-bottom:8px;">
+          Receba Ofertas no Momento Certo
+        </h3>
+        <p style="color:var(--ink-muted);margin-bottom:28px;">
+          Os clientes recebem apenas ofertas e conteúdos das lojas favoritas selecionadas.
+        </p>
+
+        <p
+          style="font-size:13px;font-weight:700;color:var(--ink-muted);text-transform:uppercase;letter-spacing:1px;margin-bottom:12px;">
+          Seus interesses
+        </p>
+        <div class="interest-tags">
+          <button class="tag active" onclick="filterCategory(this,'moda')">👗 Moda</button>
+          <button class="tag" onclick="filterCategory(this,'tecnologia')">💻 Tecnologia</button>
+          <button class="tag" onclick="filterCategory(this,'gastronomia')">🍔 Gastronomia</button>
+          <button class="tag" onclick="filterCategory(this,'beleza')">💄 Beleza</button>
+          <button class="tag" onclick="filterCategory(this,'esporte')">⚽ Esporte</button>
+        </div>
+
+        <span class="badge-rec">✦ Recomendado para você</span>
+        <div class="cards-grid" id="offerCards"></div>
+
+        <span class="badge-rec">🔥 Ofertas em Destaque</span>
+        <div class="cards-grid" id="featuredOfferCards"></div>
+
+        <p
+          style="font-size:13px;font-weight:700;color:var(--ink-muted);text-transform:uppercase;letter-spacing:1px;margin-bottom:16px;">
+          Lojas que você segue
+        </p>
+        <div class="stores-grid" id="storesGrid"></div>
+
+        <div id="promoSection" style="display:none;">
+          <p
+            style="font-size:13px;font-weight:700;color:var(--ink-muted);text-transform:uppercase;letter-spacing:1px;margin-bottom:12px;">
+            Promoções exclusivas para seguidores
+          </p>
+          <div class="promo-cards" id="promoCards"></div>
+        </div>
+
+        <div style="margin-top:40px;text-align:center;">
+          <a href="#" class="btn-primary">Quero Receber Ofertas Personalizadas</a>
+        </div>
+      </div>
+
+      <!-- ── ABA LOJISTA ────────────────────────────────────── -->
+      <div class="tab-content" id="tab-lojista">
+        <h3 style="font-size:24px;font-weight:800;color:var(--ink);margin-bottom:8px;">
+          Fortaleça o Relacionamento com seus Clientes
+        </h3>
+        <p style="color:var(--ink-muted);margin-bottom:28px;">
+          Lojas com mais visibilidade, relacionamento direto com clientes e campanhas inteligentes para aumentar
+          resultados.
+        </p>
+
+        <div class="dashboard">
+          <div class="kpis">
+            <div class="kpi-card">
+              <div class="kpi-icon">👥</div>
+              <div class="kpi-n counting" data-target="1200">0</div>
+              <div class="kpi-l">Seguidores</div>
+              <div class="kpi-trend">▲ 8% este mês</div>
+            </div>
+            <div class="kpi-card">
+              <div class="kpi-icon">🖱️</div>
+              <div class="kpi-n counting" data-target="320">0</div>
+              <div class="kpi-l">Cliques</div>
+              <div class="kpi-trend">▲ 14%</div>
+            </div>
+            <div class="kpi-card">
+              <div class="kpi-icon">💬</div>
+              <div class="kpi-n counting" data-target="78" data-suffix="%">0</div>
+              <div class="kpi-l">Engajamento</div>
+              <div class="kpi-trend">▲ 3%</div>
+            </div>
+            <div class="kpi-card">
+              <div class="kpi-icon">🚶</div>
+              <div class="kpi-n counting" data-target="540">0</div>
+              <div class="kpi-l">Visitas Geradas</div>
+              <div class="kpi-trend">▲ 21%</div>
+            </div>
+          </div>
+
+          <div class="charts-grid">
+            <div class="chart-box">
+              <div class="chart-title">Crescimento de Seguidores</div>
+              <div style="position:relative;height:200px;">
+                <canvas id="chartGrowth" role="img" aria-label="Gráfico de crescimento de seguidores por mês">
+                  Jan:600 Fev:700 Mar:780 Abr:900 Mai:1050 Jun:1200
+                </canvas>
+              </div>
+            </div>
+            <div class="chart-box">
+              <div class="chart-title">Performance de Campanhas</div>
+              <div style="position:relative;height:200px;">
+                <canvas id="chartCamp" role="img" aria-label="Gráfico de performance de campanhas">
+                  Cliques:320 Conversões:240 Visitas:540
+                </canvas>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <!-- ── SEÇÃO CAMPANHAS ─────────────────────────────── -->
+        <div class="dashboard" style="margin-top:24px;">
+          <div class="campaigns-header">
+            <div class="chart-title" style="margin-bottom:0;">Campanhas</div>
+            <button class="btn-primary" style="padding:10px 20px;font-size:14px;" onclick="openCampaignForm()">+ Nova
+              Campanha</button>
+          </div>
+
+          <!-- Formulário (modal) -->
+          <div class="campaign-modal-overlay" id="campaignModalOverlay" onclick="closeCampaignForm(event)">
+            <div class="campaign-modal" onclick="event.stopPropagation()">
+              <div class="campaign-modal-head">
+                <h3 id="campaignFormTitle">Nova Campanha</h3>
+                <button class="campaign-close" onclick="closeCampaignForm()">✕</button>
+              </div>
+              <form id="campaignForm" onsubmit="submitCampaign(event)">
+                <input type="hidden" id="campaignId">
+
+                <label class="campaign-label">Nome da Campanha</label>
+                <input class="campaign-input" id="campaignName" type="text" placeholder="Ex: Promoção Inverno 2026"
+                  required>
+
+                <label class="campaign-label">Nome da Loja</label>
+                <input class="campaign-input" id="campaignStore" type="text" placeholder="Ex: Zara" required>
+
+                <label class="campaign-label">Categoria</label>
+                <div class="interest-tags" id="campaignCategoryTags">
+                  <button type="button" class="tag active" data-cat="moda" onclick="selectCampaignCategory(this)">👗
+                    Moda</button>
+                  <button type="button" class="tag" data-cat="tecnologia" onclick="selectCampaignCategory(this)">📱
+                    Tecnologia</button>
+                  <button type="button" class="tag" data-cat="gastronomia" onclick="selectCampaignCategory(this)">🍔
+                    Gastronomia</button>
+                  <button type="button" class="tag" data-cat="beleza" onclick="selectCampaignCategory(this)">💄
+                    Beleza</button>
+                  <button type="button" class="tag" data-cat="esporte" onclick="selectCampaignCategory(this)">👟
+                    Esportes</button>
+                </div>
+
+                <label class="campaign-label">Produto Relacionado</label>
+                <select class="campaign-input" id="campaignProduct" onchange="onCampaignProductChange()" required>
+                  <option value="">Selecione um produto...</option>
+                </select>
+                <div id="campaignStockInfo" class="campaign-stock-info" style="display:none;"></div>
+
+                <label class="campaign-label">Descrição da Oferta</label>
+                <textarea class="campaign-input" id="campaignDesc" rows="3"
+                  placeholder="Ex: Até 40% OFF em toda coleção de inverno." required></textarea>
+
+                <div class="campaign-row">
+                  <div>
+                    <label class="campaign-label">Desconto</label>
+                    <input class="campaign-input" id="campaignDiscount" type="text" placeholder="Ex: 40%" required>
+                  </div>
+                </div>
+
+                <div class="campaign-row">
+                  <div>
+                    <label class="campaign-label">Data de Início</label>
+                    <input class="campaign-input" id="campaignStart" type="date" required>
+                  </div>
+                  <div>
+                    <label class="campaign-label">Data de Fim</label>
+                    <input class="campaign-input" id="campaignEnd" type="date" required>
+                  </div>
+                </div>
+
+                <label class="campaign-label">Imagem da Campanha</label>
+                <input class="campaign-input" id="campaignImageInput" type="file" accept=".jpg,.jpeg,.png,.webp"
+                  onchange="previewCampaignImage(event)">
+                <img id="campaignImagePreview" class="campaign-image-preview" style="display:none;">
+
+                <button type="submit" class="btn-primary" style="width:100%;margin-top:20px;">Publicar Campanha</button>
+              </form>
+            </div>
+          </div>
+
+          <!-- Lista de campanhas ativas -->
+          <p
+            style="font-size:13px;font-weight:700;color:var(--ink-muted);text-transform:uppercase;letter-spacing:1px;margin:24px 0 16px;">
+            Campanhas Ativas
+          </p>
+          <div class="campaigns-grid" id="campaignsGrid"></div>
+          <div id="campaignsEmpty" class="campaigns-empty">Nenhuma campanha ativa. Clique em "+ Nova Campanha" para
+            criar a primeira.</div>
+        </div>
+
+        <!-- ── SEÇÃO ESTOQUE ───────────────────────────────── -->
+        <div class="dashboard" style="margin-top:24px;">
+          <div class="campaigns-header">
+            <div class="chart-title" style="margin-bottom:0;">Estoque</div>
+            <button class="btn-primary" style="padding:10px 20px;font-size:14px;" onclick="openProductForm()">+ Novo
+              Produto</button>
+          </div>
+
+          <!-- KPIs de estoque -->
+          <div class="kpis" style="margin-top:20px;margin-bottom:8px;">
+            <div class="kpi-card">
+              <div class="kpi-icon">📦</div>
+              <div class="kpi-n" id="kpiTotalProducts">0</div>
+              <div class="kpi-l">Total de Produtos</div>
+            </div>
+            <div class="kpi-card">
+              <div class="kpi-icon">✅</div>
+              <div class="kpi-n" id="kpiInStock">0</div>
+              <div class="kpi-l">Em Estoque</div>
+            </div>
+            <div class="kpi-card">
+              <div class="kpi-icon">⚠️</div>
+              <div class="kpi-n" id="kpiLowStock">0</div>
+              <div class="kpi-l">Estoque Baixo</div>
+            </div>
+            <div class="kpi-card">
+              <div class="kpi-icon">🚫</div>
+              <div class="kpi-n" id="kpiOutOfStock">0</div>
+              <div class="kpi-l">Esgotados</div>
+            </div>
+          </div>
+
+          <!-- Modal de produto -->
+          <div class="campaign-modal-overlay" id="productModalOverlay" onclick="closeProductForm(event)">
+            <div class="campaign-modal" onclick="event.stopPropagation()">
+              <div class="campaign-modal-head">
+                <h3 id="productFormTitle">Novo Produto</h3>
+                <button class="campaign-close" onclick="closeProductForm()">✕</button>
+              </div>
+              <form id="productForm" onsubmit="submitProduct(event)">
+                <input type="hidden" id="productId">
+
+                <label class="campaign-label">Nome do Produto</label>
+                <input class="campaign-input" id="productName" type="text" placeholder="Ex: Camiseta Polo" required>
+
+                <label class="campaign-label">Categoria</label>
+                <div class="interest-tags" id="productCategoryTags">
+                  <button type="button" class="tag active" data-cat="moda" onclick="selectProductCategory(this)">👗
+                    Moda</button>
+                  <button type="button" class="tag" data-cat="tecnologia" onclick="selectProductCategory(this)">📱
+                    Tecnologia</button>
+                  <button type="button" class="tag" data-cat="gastronomia" onclick="selectProductCategory(this)">🍔
+                    Gastronomia</button>
+                  <button type="button" class="tag" data-cat="beleza" onclick="selectProductCategory(this)">💄
+                    Beleza</button>
+                  <button type="button" class="tag" data-cat="esporte" onclick="selectProductCategory(this)">👟
+                    Esportes</button>
+                </div>
+
+                <div class="campaign-row">
+                  <div>
+                    <label class="campaign-label">Código SKU</label>
+                    <input class="campaign-input" id="productSku" type="text" placeholder="Ex: CAM-POL-001" required>
+                  </div>
+                  <div>
+                    <label class="campaign-label">Preço (R$)</label>
+                    <input class="campaign-input" id="productPrice" type="number" min="0" step="0.01"
+                      placeholder="Ex: 99.00" required>
+                  </div>
+                </div>
+
+                <div class="campaign-row">
+                  <div>
+                    <label class="campaign-label">Quantidade em Estoque</label>
+                    <input class="campaign-input" id="productQty" type="number" min="0" step="1" placeholder="Ex: 12"
+                      required>
+                  </div>
+                  <div>
+                    <label class="campaign-label">Estoque Mínimo</label>
+                    <input class="campaign-input" id="productMinQty" type="number" min="0" step="1" placeholder="Ex: 5"
+                      required>
+                  </div>
+                </div>
+
+                <label class="campaign-label">Descrição</label>
+                <textarea class="campaign-input" id="productDesc" rows="3"
+                  placeholder="Descrição do produto"></textarea>
+
+                <label class="campaign-label">Imagem</label>
+                <input class="campaign-input" id="productImageInput" type="file" accept=".jpg,.jpeg,.png,.webp"
+                  onchange="previewProductImage(event)">
+                <img id="productImagePreview" class="campaign-image-preview" style="display:none;">
+
+                <div class="campaign-row" style="margin-top:20px;">
+                  <button type="submit" class="btn-primary" style="width:100%;">Salvar Produto</button>
+                  <button type="button" class="btn-secondary" style="width:100%;"
+                    onclick="closeProductForm()">Cancelar</button>
+                </div>
+              </form>
+            </div>
+          </div>
+
+          <!-- Tabela de produtos -->
+          <p
+            style="font-size:13px;font-weight:700;color:var(--ink-muted);text-transform:uppercase;letter-spacing:1px;margin:24px 0 16px;">
+            Produtos Cadastrados
+          </p>
+          <div class="products-table-wrap">
+            <table class="products-table" id="productsTable">
+              <thead>
+                <tr>
+                  <th>Produto</th>
+                  <th>Categoria</th>
+                  <th>Preço</th>
+                  <th>Estoque</th>
+                  <th>Status</th>
+                  <th>Ações</th>
+                </tr>
+              </thead>
+              <tbody id="productsTableBody"></tbody>
+            </table>
+          </div>
+          <div id="productsEmpty" class="campaigns-empty">Nenhum produto cadastrado. Clique em "+ Novo Produto" para
+            começar.</div>
+        </div>
+
+        <div style="margin-top:32px;text-align:center;">
+          <a href="#" class="btn-primary">Quero Atrair Mais Clientes</a>
+        </div>
+      </div>
+
+      <!-- ── ABA SHOPPING ───────────────────────────────────── -->
+      <div class="tab-content" id="tab-shopping">
+        <h3 style="font-size:24px;font-weight:800;color:var(--ink);margin-bottom:8px;">
+          Relatórios Inteligentes e Dados em Tempo Real
+        </h3>
+        <p style="color:var(--ink-muted);margin-bottom:28px;">
+          Transforme dados em inteligência estratégica para aumentar engajamento e impulsionar o fluxo no shopping.
+        </p>
+
+        <div class="dashboard">
+          <div class="kpis">
+            <div class="kpi-card">
+              <div class="kpi-icon">👤</div>
+              <div class="kpi-n counting" data-target="1842">0</div>
+              <div class="kpi-l">Usuários Ativos</div>
+              <div class="kpi-trend">▲ 12%</div>
+            </div>
+            <div class="kpi-card">
+              <div class="kpi-icon">❤️</div>
+              <div class="kpi-n counting" data-target="5320">0</div>
+              <div class="kpi-l">Seguidores de Lojas</div>
+              <div class="kpi-trend">▲ 18%</div>
+            </div>
+            <div class="kpi-card">
+              <div class="kpi-icon">📣</div>
+              <div class="kpi-n counting" data-target="48">0</div>
+              <div class="kpi-l">Campanhas Ativas</div>
+              <div class="kpi-trend">▲ 6%</div>
+            </div>
+            <div class="kpi-card">
+              <div class="kpi-icon">🏃</div>
+              <div class="kpi-n counting" data-target="300" data-suffix="+">0</div>
+              <div class="kpi-l">Fluxo Físico Previsto (k)</div>
+              <div class="kpi-trend">▲ 9%</div>
+            </div>
+            <div class="kpi-card">
+              <div class="kpi-icon">📈</div>
+              <div class="kpi-n counting" data-target="78" data-suffix="%">0</div>
+              <div class="kpi-l">Taxa de Engajamento</div>
+              <div class="kpi-trend">▲ 3%</div>
+            </div>
+          </div>
+
+          <div class="charts-grid">
+            <div class="chart-box">
+              <div class="chart-title">Engajamento por Categoria</div>
+              <div style="position:relative;height:220px;">
+                <canvas id="chartCat" role="img" aria-label="Engajamento por categoria">
+                  Moda:84% Tecnologia:76% Gastronomia:68% Beleza:80% Esporte:86%
+                </canvas>
+              </div>
+            </div>
+            <div class="chart-box">
+              <div class="chart-title">Crescimento de Usuários</div>
+              <div style="position:relative;height:220px;">
+                <canvas id="chartUsers" role="img" aria-label="Crescimento de usuários">
+                  Jan:900 Fev:1100 Mar:1250 Abr:1400 Mai:1650 Jun:1842
+                </canvas>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <!-- ── INTELIGÊNCIA DO SHOPPING ──────────────────────────── -->
+        <div class="dashboard si-dashboard" id="shoppingIntelligenceSection" style="margin-top:24px;">
+          <div class="si-header">
+            <div class="si-title">🧠 Inteligência do Shopping</div>
+            <div class="si-subtitle">Dados em tempo real de campanhas e estoque cadastrados pelos lojistas</div>
+          </div>
+
+          <!-- Linha 1: Categorias com Maior Disponibilidade + Produtos Mais Anunciados -->
+          <div class="si-grid-2">
+
+            <!-- Categorias com Maior Disponibilidade -->
+            <div class="si-card">
+              <div class="si-card-header">
+                <span class="si-card-icon">📦</span>
+                <div>
+                  <div class="si-card-title">Categorias com Maior Disponibilidade</div>
+                  <div class="si-card-desc">Ranking de estoque por categoria</div>
+                </div>
+              </div>
+              <div class="si-list" id="siCategoryAvailability">
+                <div class="si-empty-msg">Cadastre produtos no módulo Lojista para visualizar dados.</div>
+              </div>
+            </div>
+
+            <!-- Produtos Mais Anunciados -->
+            <div class="si-card">
+              <div class="si-card-header">
+                <span class="si-card-icon">📣</span>
+                <div>
+                  <div class="si-card-title">Produtos Mais Anunciados</div>
+                  <div class="si-card-desc">Presença em campanhas promocionais</div>
+                </div>
+              </div>
+              <div class="si-list" id="siMostAdvertised">
+                <div class="si-empty-msg">Crie campanhas vinculadas a produtos para ver este ranking.</div>
+              </div>
+            </div>
+          </div>
+
+          <!-- Linha 2: Produtos Mais Procurados + Tendência de Ruptura -->
+          <div class="si-grid-2" style="margin-top:16px;">
+
+            <!-- Produtos Mais Procurados -->
+            <div class="si-card">
+              <div class="si-card-header">
+                <span class="si-card-icon">🔍</span>
+                <div>
+                  <div class="si-card-title">Produtos Mais Procurados</div>
+                  <div class="si-card-desc">Tendências de consumo</div>
+                </div>
+              </div>
+              <div class="si-list" id="siMostSought"></div>
+            </div>
+
+            <!-- Tendência de Ruptura -->
+            <div class="si-card">
+              <div class="si-card-header">
+                <span class="si-card-icon">⚠️</span>
+                <div>
+                  <div class="si-card-title">Tendência de Ruptura de Estoque</div>
+                  <div class="si-card-desc">Produtos próximos de esgotar</div>
+                </div>
+              </div>
+              <div id="siRuptureKpis" class="si-rupture-kpis"></div>
+              <div class="si-list" id="siRuptureList">
+                <div class="si-empty-msg">Nenhum produto em situação crítica no momento.</div>
+              </div>
+            </div>
+          </div>
+
+          <!-- Linha 3: Ranking de Lojas (largura total) -->
+          <div class="si-grid-1" style="margin-top:16px;">
+            <div class="si-card">
+              <div class="si-card-header">
+                <span class="si-card-icon">🏆</span>
+                <div>
+                  <div class="si-card-title">Ranking de Lojas por Giro de Estoque</div>
+                  <div class="si-card-desc">Baseado em campanhas criadas e produtos cadastrados</div>
+                </div>
+              </div>
+              <div class="si-ranking-grid" id="siStoreRanking">
+                <div class="si-empty-msg">Nenhuma loja com campanhas ativas ainda.</div>
+              </div>
+            </div>
+          </div>
+
+        </div><!-- /.si-dashboard -->
+
+        <div style="margin-top:32px;text-align:center;">
+          <a href="#" class="btn-primary">Quero Conhecer Melhor Meus Clientes</a>
+        </div>
+      </div>
+
+    </div><!-- /.container -->
+  </section>
+
+  <!-- ═══════════════════════════════ BENEFÍCIOS ══════════════════════════ -->
+  <section id="beneficios">
+    <div class="container">
+      <p class="section-label" style="text-align:center;">Por que Gruplace</p>
+      <h2 class="section-title" style="text-align:center;">Benefícios para todos</h2>
+      <p class="section-sub" style="text-align:center;margin:0 auto 48px;">
+        Um ecossistema onde consumidores, lojistas e shoppings crescem juntos.
+      </p>
+      <div class="benefits-grid">
+        <div class="benefit-card">
+          <div class="benefit-icon">👤</div>
+          <div class="benefit-title">Consumidor</div>
+          <div class="benefit-desc">
+            Receba apenas ofertas relevantes das lojas que você ama.
+            Menos ruído, mais valor. Uma experiência de compra verdadeiramente personalizada.
+          </div>
+        </div>
+        <div class="benefit-card" style="background:var(--blue-light);border-color:rgba(37,99,235,0.15);">
+          <div class="benefit-icon">🏪</div>
+          <div class="benefit-title">Lojista</div>
+          <div class="benefit-desc">
+            Mais relacionamento direto com seus clientes, campanhas inteligentes e dados reais
+            para aumentar suas vendas dentro do shopping.
+          </div>
+        </div>
+        <div class="benefit-card" style="background:var(--purple-light);border-color:rgba(124,58,237,0.15);">
+          <div class="benefit-icon">🏢</div>
+          <div class="benefit-title">Shopping</div>
+          <div class="benefit-desc">
+            Dashboard executivo com inteligência estratégica: entenda o comportamento
+            dos clientes e tome decisões baseadas em dados reais.
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ═══════════════════════════════ CTA BAR ═════════════════════════════ -->
+  <div class="cta-bar">
+    <h2>Pronto para transformar a experiência do seu shopping?</h2>
+    <a href="#" class="btn-white">Começar agora →</a>
+  </div>
+
+  <!-- ═══════════════════════════════ FOOTER ══════════════════════════════ -->
+  <footer>
+    <div class="footer-inner">
+      <a href="#" class="logo" style="font-size:18px;">Gru<span>place</span></a>
+      <div class="footer-links">
+        <a href="#solucoes" onclick="showConsumer(event)">Consumidor</a>
+        <a href="#solucoes" onclick="showStoreOwner(event)">Lojista</a>
+        <a href="#solucoes" onclick="showShopping(event)">Shopping</a>
+        <a href="#" onclick="openAuthModal('login', event)">Login</a>
+      </div>
+      <p class="footer-copy">© 2026 Gruplace. Todos os direitos reservados.</p>
+    </div>
+  </footer>
+
+  <!-- ═══════════════════════════════ AUTH MODALS ═════════════════════════ -->
+  <div class="auth-modal-overlay" id="loginModalOverlay" onclick="closeAuthModals(event)">
+    <div class="auth-modal" onclick="event.stopPropagation()">
+      <div class="campaign-modal-head">
+        <h3>Acesse sua conta</h3>
+        <button class="campaign-close" onclick="closeAuthModals()">✕</button>
+      </div>
+      <form id="loginForm" onsubmit="submitLogin(event)">
+        <label class="campaign-label">E-mail</label>
+        <input class="campaign-input" id="loginEmail" type="email" placeholder="seuemail@exemplo.com" required>
+
+        <label class="campaign-label">Senha</label>
+        <input class="campaign-input" id="loginPassword" type="password" placeholder="••••••••" required>
+
+        <button type="submit" class="btn-primary" style="width:100%;margin-top:20px;">Entrar</button>
+
+        <div class="auth-links">
+          <a href="#" onclick="return forgotPassword()">Esqueci minha senha</a>
+          <a href="#" onclick="return openAuthModal('register')">Criar conta</a>
+        </div>
+      </form>
+    </div>
+  </div>
+
+  <div class="auth-modal-overlay" id="registerModalOverlay" onclick="closeAuthModals(event)">
+    <div class="auth-modal" onclick="event.stopPropagation()">
+      <div class="campaign-modal-head">
+        <h3>Criar conta</h3>
+        <button class="campaign-close" onclick="closeAuthModals()">✕</button>
+      </div>
+      <form id="registerForm" onsubmit="submitRegister(event)">
+        <label class="campaign-label">Nome Completo</label>
+        <input class="campaign-input" id="registerName" type="text" placeholder="Seu nome" required>
+
+        <label class="campaign-label">E-mail</label>
+        <input class="campaign-input" id="registerEmail" type="email" placeholder="seuemail@exemplo.com" required>
+
+        <label class="campaign-label">Senha</label>
+        <input class="campaign-input" id="registerPassword" type="password" placeholder="••••••••" required>
+
+        <label class="campaign-label">Confirmar Senha</label>
+        <input class="campaign-input" id="registerPasswordConfirm" type="password" placeholder="••••••••" required>
+
+        <label class="campaign-label">Tipo de Conta</label>
+        <div class="interest-tags" id="registerAccountType">
+          <button type="button" class="tag active" data-type="consumidor"
+            onclick="selectAccountType(this)">Consumidor</button>
+          <button type="button" class="tag" data-type="lojista" onclick="selectAccountType(this)">Lojista</button>
+          <button type="button" class="tag" data-type="shopping" onclick="selectAccountType(this)">Shopping</button>
+        </div>
+
+        <button type="submit" class="btn-primary" style="width:100%;margin-top:20px;">Criar Conta</button>
+
+        <div class="auth-links">
+          <a href="#" onclick="return openAuthModal('login')">Já tenho conta — Entrar</a>
+        </div>
+      </form>
+    </div>
+  </div>
+
+  <script src="assets/js/main.js"></script>
+</body>
+
+</html>
