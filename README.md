@@ -207,19 +207,26 @@ Acompanha Indicadores em Tempo Real
 
 #### Acesse a apresentação completa do Gruplace::
 
-🔗 [Visualizar Pitch Gruplace]   [Abrir Pitch Gruplace (PDF)](https://gruplace-shopping-platform-7wzq.vercel.app/docs/Pitch_Gruplace.pdf)
+🔗 [Visualizar Pitch Gruplace]  
+<a href="https://gruplace-shopping-platform-7wzq.vercel.app/docs/Pitch_Gruplace.pdf" target="_blank" rel="noopener noreferrer">
+Abrir Pitch Gruplace (PDF)
+</a>
 
 ## Demonstração do MVP
 
 #### Acesse a versão publicada:
 
-🔗 [Abrir MVP Gruplace](https://gruplace-shopping-platform-7wzq.vercel.app/)
+🔗 <a href="https://gruplace-shopping-platform-7wzq.vercel.app/" target="_blank" rel="noopener noreferrer">
+Acessar MVP Gruplace
+</a>
 
 ## Repositório
 
 #### Código-fonte do projeto:
 
-🔗 [Acessar repositório do projeto](https://github.com/marcelfcampos/gruplace-shopping-platform)
+🔗 <a href="https://github.com/marcelfcampos/gruplace-shopping-platform" target="_blank" rel="noopener noreferrer">
+Acessar repositório do projeto
+</a>
 
 ## ## Equipe Fundadora do Gruplace
 
@@ -249,24 +256,24 @@ O Gruplace nasce para se tornar a principal plataforma de inteligência comercia
 
 #### Marcel
 
-- [LinkedIn](https://www.linkedin.com/in/marcelfcampos/)
+- <a href="https://www.linkedin.com/in/marcelfcampos/" target="_blank" rel="noopener noreferrer">LinkedIn</a>
 
-- [GitHub](https://github.com/marcelfcampos)
+- <a href="https://github.com/marcelfcampos" target="_blank" rel="noopener noreferrer">GitHub</a>
 
 ##
 
 #### Giovanna
 
-- [LinkedIn](http://www.linkedin.com/in/giovannafontanellac/)
+- <a href="http://www.linkedin.com/in/giovannafontanellac/" target="_blank" rel="noopener noreferrer">LinkedIn</a>
 
-- [GitHub](https://github.com/giovannafcampos)
+- <a href="https://github.com/giovannafcampos" target="_blank" rel="noopener noreferrer">GitHub</a>
 
 ##
 
 #### Fernanda
 
-- [LinkedIn](http://linkedin.com/in/fernandavfontanella/)
+- <a href="http://linkedin.com/in/fernandavfontanella/" target="_blank" rel="noopener noreferrer">LinkedIn</a>
 
-- [GitHub](https://github.com/fernandavfontanella)
+- <a href="https://github.com/fernandavfontanella" target="_blank" rel="noopener noreferrer">GitHub</a>
 
 ##
